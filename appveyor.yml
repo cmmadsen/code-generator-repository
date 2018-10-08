@@ -1,12 +1,7 @@
 version: 1.0.0.{build}
 image: Visual Studio 2017
-environment:
-install:
-before_build:
 clone_folder: c:\work
 build_script:
   - cmd: PowerShell -Version 2.0 .\build.ps1 -Target Publish
 artifacts:
  - path: '*.nupkg' 
-test_script:
-on_finish:
